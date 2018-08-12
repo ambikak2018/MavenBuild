@@ -33,6 +33,6 @@ stage ('Archive Artifacts'){
 //input message: "QA Team Approval for Production Deployment?"
 
 stage ('Production Deployment'){
-	bat 'copy target/*.war http://localhost:8080/'
+	bat 'copy target/*.war C:/Apache/tomcat/webapps'
 }
 }
