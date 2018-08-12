@@ -33,6 +33,7 @@ stage ('Archive Artifacts'){
 //input message: "QA Team Approval for Production Deployment?"
 
 stage ('Production Deployment'){
-	bat 'copy target/*.war new/'
+	bat dir
+	bat 'copy target\*.war new\'
 }
 }
