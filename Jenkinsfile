@@ -15,7 +15,7 @@ stage ('Test Cases Execution'){
 }
 	
 stage ('Integration Test'){
-	sh ""
+	bat ""
 }
 
 stage ('Sonar Analysis'){
