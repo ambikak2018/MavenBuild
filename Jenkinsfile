@@ -7,11 +7,11 @@ stage ('checkout code'){
 }
 	
 stage ('build'){
-	sh "${MVNHOME}/bin/mvn clean install"
+	bat "${MVNHOME}/bin/mvn clean install"
 }
 
 stage ('Test Cases Execution'){
-	sh "${MVNHOME}/bin/mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test"
+	bat "${MVNHOME}/bin/mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install -Pcoverage-per-test"
 }
 	
 stage ('Integration Test'){
@@ -33,6 +33,6 @@ stage ('Archive Artifacts'){
 //input message: "QA Team Approval for Production Deployment?"
 
 stage ('Production Deployment'){
-	sh 'cp target/*.war /opt/tomcat8/webapps'
+	bat 'cp target/*.war /opt/tomcat8/webapps'
 }
 }
