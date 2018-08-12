@@ -34,6 +34,6 @@ stage ('Archive Artifacts'){
 
 stage ('Production Deployment'){
 	bat dir
-	bat 'copy target\*.war new\'
+	bat 'copy target\\*.war new\\'
 }
 }
