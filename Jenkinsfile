@@ -27,7 +27,7 @@ stage('Code Coverage ') {
    }
 
 stage ('Archive Artifacts'){
-	archiveArtifacts artifacts: 'target/*.war'
+	archiveArtifacts artifacts: 'target\\*.war'
 }
 
 //input message: "QA Team Approval for Production Deployment?"
