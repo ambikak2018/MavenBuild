@@ -71,5 +71,16 @@
       </dependencies>
     </profile>
   </profiles>
-  
+ <distributionManagement>
+   <repository>
+     <id>deployment</id>
+     <name>Internal Release</name>
+     <url>http://35.196.75.171:8081/nexus/content/repositories/sample-release-repo/</url>
+   </repository>
+   <snapshotRepository>
+     <id>deployment</id>
+     <name>Internal snapshot Release</name>
+     <url>http://35.196.75.171:8081/nexus/content/repositories/sample-snapshot-repo/</url>
+   </snapshotRepository>
+ </distributionManagement>
 </project>
